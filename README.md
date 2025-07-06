@@ -1,46 +1,28 @@
-🕵️‍♂️ Tax Fraud Detection – Full Stack Project
+# 🕵️‍♂️ Tax Fraud Detection – Full Stack Project
 
-📌 Overview
-This is a full-stack web application designed to simulate and demonstrate tax fraud detection mechanisms using a basic database setup and interactive frontend interface. The project integrates backend APIs, a responsive UI, and a SQL database to visualize and manage tax-related records.
+## 📌 Overview
+**Tax Fraud Detection** is a full-stack web application that simulates fraud detection mechanisms using a structured SQL database, an interactive frontend, and a Node.js backend. It helps visualize and manage tax-related records and operations in a modular and scalable manner.
 
-🧱 Tech Stack
-Frontend: HTML, CSS, JavaScript
-Backend: Node.js with Express.js
-Database: MySQL (schema provided via database.sql)
-Package Manager: npm
+---
 
-📁 Project Structure
-tax-fraud-detection/
-│
-├── database.sql              # SQL schema or sample data for tax records
-├── index.html                # Frontend landing page
-├── script.js                 # Frontend logic and interactions
-├── styles.css                # UI styling
-├── db.js                     # (Possibly) Shared database config or script
-│
-├── backend/
-│   ├── server.js             # Main Express server file
-│   ├── db.js                 # Database connection logic
-│   ├── package.json          # Node.js project dependencies
-│   └── node_modules/         # Backend dependencies (auto-generated)
+## 🧱 Tech Stack
 
+- **Frontend**: HTML, CSS, JavaScript  
+- **Backend**: Node.js with Express.js  
+- **Database**: MySQL (schema provided in `database.sql`)  
+- **Package Manager**: npm  
 
-⚙️ Features
-📋 Interactive Dashboard: A frontend that allows users to interact with tax records.
-🚦 Backend API: Express server handles routes and integrates with the database.
-🗃️ MySQL Integration: SQL schema to manage taxpayer data, transactions, or fraud alerts.
-🔐 Modular Code Structure: Clean separation between frontend, backend, and database logic.
+---
 
-🛠️ How to Run
-Clone the repository:
-git clone https://github.com/your-username/tax-fraud-detection.git
-cd tax-fraud-detection/backend
+## 📁 Project Structure
 
-Install dependencies:
-npm install
+![{02E72B26-A266-49B7-BD58-261F16B3B065}](https://github.com/user-attachments/assets/41717e7b-8d8f-448a-aa27-78d5e5f655e8)
 
-Start the server:
-node server.js
+---
 
-Open index.html in your browser to access the frontend interface.
-💡 Make sure you have MySQL running and import the database.sql file to initialize your database.
+## ⚙️ Features
+
+- 📋 **Interactive Dashboard** – Allows users to interact with and view tax records  
+- 🚦 **Backend API** – Node.js Express server handles routes and DB communication  
+- 🗃️ **MySQL Integration** – Manage taxpayer data, transactions, and fraud alerts  
+- 🔐 **Modular Architecture** – Clean separation of frontend, backend, and database  
