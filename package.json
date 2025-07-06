@@ -1,0 +1,10 @@
+{
+    "name": "tax-fraud-frontend",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "http-server -p 3001"
+    },
+    "dependencies": {
+      "http-server": "^14.1.1"
+    }
+  }

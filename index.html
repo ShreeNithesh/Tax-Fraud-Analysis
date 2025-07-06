@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Fraud Detection System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" class="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Advanced AI-Powered Tax Fraud Detection</h1>
+            <p>Protect your financial systems with real-time fraud detection and AI-driven insights.</p>
+            <a href="#main-content" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section id="features">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Real-time Fraud Detection</h3>
+                <p>Identify and stop fraudulent activities as they happen with our advanced AI algorithms.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-brain"></i>
+                <h3>AI-Powered Risk Analysis</h3>
+                <p>Leverage machine learning to assess risks and predict potential fraud patterns.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-file-alt"></i>
+                <h3>Automated Reporting</h3>
+                <p>Generate detailed reports effortlessly to stay compliant and informed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Preview Section -->
+    <section id="dashboard-preview">
+        <h2>Explore Our Dashboard</h2>
+        <div class="dashboard-content">
+            <div class="dashboard-text">
+                <p>Monitor fraud trends, analyze risks, and manage taxpayers with our intuitive dashboard.</p>
+            </div>
+            <div class="dashboard-animation">
+                <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_5q5z7h.json" background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay></lottie-player>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies & Testimonials Section -->
+    <section id="testimonials">
+        <h2>Success Stories</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 1">
+                <p>"This system saved us millions by detecting fraud early. A game-changer for our financial security!"</p>
+                <h4>John Doe, CFO at FinCorp</h4>
+            </div>
+            <div class="testimonial">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client 2">
+                <p>"The AI-driven insights are incredible. We now have full control over our tax compliance."</p>
+                <h4>Jane Smith, Tax Analyst at TaxPro</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI & Security Section -->
+    <section id="ai-security">
+        <h2>Powered by AI & Security</h2>
+        <div class="ai-security-content">
+            <div class="ai-security-text">
+                <p>Our system uses advanced machine learning to detect fraud patterns, ensuring your data is secure with state-of-the-art encryption.</p>
+            </div>
+            <div class="ai-security-infographic">
+                <img src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg" alt="AI Infographic">
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <header>
+            <div class="logo">Tax Fraud Detection</div>
+            <nav>
+                <button id="home-btn"><i class="fas fa-home"></i> Home</button>
+                <button id="search-btn"><i class="fas fa-search"></i> Search Taxpayer</button>
+                <button id="locality-btn"><i class="fas fa-map-marker-alt"></i> Locality Analysis</button>
+                <button id="fraud-btn"><i class="fas fa-exclamation-triangle"></i> Fraud Taxpayers</button>
+                <button id="trends-btn"><i class="fas fa-chart-line"></i> Fraud Trends</button>
+            </nav>
+        </header>
+
+        <div class="container">
+            <!-- Add New Taxpayer Section -->
+            <div id="home" class="section active">
+                <h2>Add New Taxpayer</h2>
+                <form id="taxpayer-form">
+                    <input type="text" id="first_name" placeholder="First Name" required>
+                    <input type="text" id="last_name" placeholder="Last Name" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="text" id="phone_no" placeholder="Phone Number (e.g., +1-XXX-XXX-XXXX)" required>
+                    <input type="text" id="address" placeholder="Address">
+                    <input type="text" id="city" placeholder="City" required>
+                    <input type="text" id="state" placeholder="State" required>
+                    <input type="text" id="country" placeholder="Country" required>
+                    <input type="date" id="dob" required>
+                    <input type="text" id="occupation" placeholder="Occupation">
+                    <select id="marital_stat" required>
+                        <option value="" disabled selected>Marital Status</option>
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                        <option value="Divorced">Divorced</option>
+                    </select>
+                    <select id="employment_stat" required>
+                        <option value="" disabled selected>Employment Status</option>
+                        <option value="Employed">Employed</option>
+                        <option value="Unemployed">Unemployed</option>
+                        <option value="Self-Employed">Self-Employed</option>
+                    </select>
+                    <input type="text" id="ssn" placeholder="SSN (XXX-XX-XXXX)" required pattern="\d{3}-\d{2}-\d{4}">
+                    <input type="number" id="salary" placeholder="Annual Salary" required min="0" step="0.01">
+                    <button type="submit">Add Taxpayer</button>
+                </form>
+                <div id="form-message"></div>
+                <button id="fetch-taxpayers-btn">Fetch Taxpayers</button>
+                <button id="export-taxpayers-btn">Export Taxpayers</button>
+                <div id="taxpayer-list"></div>
+            </div>
+
+            <!-- Search Taxpayer Section -->
+            <div id="search" class="section">
+                <h2>Search Taxpayer</h2>
+                <input type="text" id="search-name" placeholder="Enter Name">
+                <input type="text" id="search-phone" placeholder="Enter Phone (Optional)">
+                <button id="search-submit-btn">Search</button>
+                <div id="search-results"></div>
+            </div>
+
+            <!-- Locality Analysis Section -->
+            <div id="locality" class="section">
+                <h2>Locality Analysis</h2>
+                <input type="text" id="locality-city" placeholder="Enter City">
+                <button id="locality-submit-btn">Analyze</button>
+                <canvas id="locality-chart"></canvas>
+            </div>
+
+            <!-- Fraud Taxpayers Section -->
+            <div id="fraud" class="section">
+                <h2>Fraudulent Taxpayers</h2>
+                <input type="text" id="fraud-city-filter" placeholder="Filter by City (Optional)">
+                <button id="fraud-submit-btn">Fetch Fraudulent Taxpayers</button>
+                <div id="fraud-list"></div>
+            </div>
+
+            <!-- Fraud Trends Section -->
+            <div id="trends" class="section">
+                <h2>Fraud Trends Analysis</h2>
+                <button id="trends-submit-btn">Fetch Fraud Trends</button>
+                <canvas id="trends-chart"></canvas>
+            </div>
+        </div>
+
+        <!-- CTA Footer -->
+        <footer id="cta-footer">
+            <div class="cta-footer-content">
+                <h2>Ready to Secure Your Financial Systems?</h2>
+                <p>Schedule a demo today and see how our AI-powered solution can protect your organization.</p>
+                <a href="#contact" class="cta-button">Schedule a Demo</a>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+            <p>© 2025 Tax Fraud Detection System. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
